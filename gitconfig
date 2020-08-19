@@ -1,0 +1,36 @@
+[user]
+	name = talon.xie
+	email = talon.xie@xiaoying.com
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+	ui = true
+[core]
+	editor = vim
+	excludesfile = /Users/xiefa/.gitignore_global
+[merge]
+	tool = vimdiff
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	dt = difftool --tool=vimdiff --no-prompt
+	df = diff
+	l0 = log --color --graph --decorate --pretty=oneline --abbrev-commit --date-order
+	l1 = log --color --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	l2 = log --all --color --graph --decorate --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	sth = stash
+	re = rebase
+	ru = remote update
+	ft = fetch
+[apply]
+	whitespace = nowarn
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
